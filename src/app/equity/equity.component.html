@@ -1,0 +1,241 @@
+<div class="container py-5">
+  <div class="container py-3">
+    <div class="shadow rounded-4 p-3 p-md-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 text-center mb-4 px-3 px-md-4">
+          <h2 class="fw-bold text-primary mb-3">
+            Understanding Equity: <span style="color: rgb(30, 179, 0);">Your Path to Wealth Creation</span>
+          </h2>
+          <p class="fw-light fs-5 text-muted">
+            Welcome to our comprehensive guide on <strong class="fw-bold">equity</strong> – a foundational concept in
+            finance that enables individuals like you to
+            participate in company growth and build sustainable, long-term wealth. Whether you're a seasoned investor or
+            just
+            starting your financial journey, gaining clarity on equity is essential for making confident, informed
+            decisions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- What is Equity Section with Right Image -->
+  <div class="row align-items-center rounded-4  p-4 p-lg-5 mb-5">
+    <div class="col-md-7">
+      <h4 class="fw-bold text-dark-blue mb-3">What is Equity?</h4>
+      <p class="text-secondary mb-3">
+        In simple terms, equity represents ownership. When you buy shares of a company, you become a shareholder,
+        meaning you own a small portion of that company. This ownership gives you certain rights, including a
+        claim on the company's assets and earnings.
+      </p>
+      <p class="fw-semibold text-dark mb-2">Equity can refer to:</p>
+      <ul class="text-dark ps-3 mb-0">
+        <li class="mb-2"><strong>Stock (Shares):</strong> Ownership in a public company.</li>
+        <li class="mb-2"><strong>Owner's Equity:</strong> Assets minus liabilities on a balance sheet.</li>
+        <li><strong>Home Equity:</strong> Market value of your home minus the mortgage owed.</li>
+      </ul>
+    </div>
+    <div class="col-md-5 text-center mt-4 mt-md-0">
+      <img src="assets/img/equ1.png" alt="Equity Illustration" class="img-fluid rounded-4 ">
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-12 mt-4">
+      <div class="bg-white p-3 p-md-4 rounded-4">
+        <div class="row justify-content-center">
+          <!-- Right Content -->
+          <div class="col-md-8 text-center">
+            <h4 class="fw-bold text-dark-blue mb-3">Why Invest in Equity?</h4>
+            <p class="text-muted mb-4">
+              The primary goal for many equity investors is to see the value of their shares increase over time.
+              As a company grows and becomes more profitable, its stock price tends to rise, allowing you to sell your
+              shares for a profit.
+            </p>
+
+            <!-- <ul class="list-group list-group-flush">
+              <li class="list-group-item bg-white border-0 px-0 text-dark">
+                <strong>Capital Appreciation:</strong> The value of shares tends to rise as companies grow and become
+                more
+                profitable, offering potential profit on sale.
+              </li>
+              <li class="list-group-item bg-white border-0 px-0 text-dark">
+                <strong>Dividends:</strong> Many companies pay out a portion of their profits to shareholders, providing
+                regular income.
+              </li>
+              <li class="list-group-item bg-white border-0 px-0 text-dark">
+                <strong>Inflation Hedge:</strong> Historically, equity investments have outpaced inflation, preserving and growing your purchasing power.
+              </li>
+              <li class="list-group-item bg-white border-0 px-0 text-dark">
+                <strong>Liquidity:</strong> Shares of public companies are generally easy to trade on stock exchanges,
+                offering quick access to funds.
+              </li>
+              <li class="list-group-item bg-white border-0 px-0 text-dark">
+                <strong>Diversification:</strong> Equity helps spread risk across various sectors and asset classes in
+                an
+                investment portfolio.
+              </li>
+            </ul> -->
+
+
+            <!-- Carousel Section -->
+            <div class="container">
+              <p-carousel #carouselRef [value]="directorsInfo" [numVisible]="1" [numScroll]="1" [circular]="true"
+                [autoplayInterval]="1000" styleClass="custom-carousel" (mouseenter)="carouselRef.stopAutoplay()"
+                (mouseleave)="carouselRef.startAutoplay()">
+                <ng-template let-director pTemplate="item">
+                  <div class="d-flex justify-content-center">
+                    <div class="team-member text-center" style="max-width: 300px; padding: 8px;">
+                      <div class="member-img mb-2" style="height: 160px; overflow: hidden;">
+                        <img src="{{director.image}}" class="img-fluid rounded" alt=""
+                          style="max-height: 100%; max-width: 100%; object-fit: cover;">
+                      </div>
+                      <div class="member-info">
+                        <h5 class="fw-semibold mb-1">{{director.name}}</h5>
+                        <p class="small text-muted">{{director.message}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </p-carousel>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row justify-content-center">
+    <div class="col-12 mt-4">
+      <div class="bg-white p-4 p-md-5 rounded-4 ">
+        <div class="row align-items-center">
+          <!-- Text Content Left -->
+          <div class="col-md-7">
+            <h4 class="fw-bold text-dark-blue mb-4">Key Concepts in Equity Investing</h4>
+            <ul class="list-unstyled text-dark ps-2">
+              <li class="mb-3"><strong>Shares/Stocks:</strong> Units of company ownership.</li>
+              <li class="mb-3"><strong>Stock Exchange:</strong> A marketplace where stocks are bought and sold (e.g.,
+                NSE, BSE).</li>
+              <li class="mb-3"><strong>Market Capitalization:</strong> Total value of a company's outstanding shares
+                (share price × number of shares).</li>
+              <li class="mb-3"><strong>Dividends:</strong> Payments made by a company to shareholders from profits.</li>
+              <li class="mb-3"><strong>Capital Gains:</strong> Profit earned by selling shares at a higher price than
+                purchase.</li>
+              <li class="mb-3"><strong>Volatility:</strong> Price fluctuations in the market over time.</li>
+              <li><strong>Risk and Return:</strong> Greater potential return often comes with greater risk.</li>
+            </ul>
+          </div>
+
+          <!-- Image Right -->
+          <div class="col-md-5 text-center mt-4 mt-md-0">
+            <img src="assets/img/keyequ1.png" alt="Key Concepts in Equity" class="img-fluid rounded-3 ">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-12 mt-4">
+      <div class="bg-white p-4 p-md-5 rounded-4 ">
+        <div class="row align-items-center">
+          <!-- Image Left -->
+          <div class="col-md-5 text-center mb-4 mb-md-0">
+            <img src="assets/img/riskequ1.png" alt="Risks in Equity" class="img-fluid rounded-3">
+          </div>
+          <!-- Content Right -->
+          <div class="col-md-7">
+            <h4 class="fw-bold text-dark-blue mb-3">Risks Associated with Equity Investing</h4>
+            <p class="text-muted">
+              While equity investing offers significant opportunities, it's essential to be aware of the inherent
+              risks:
+            </p>
+            <ul class="list-unstyled ps-2">
+              <li class="mb-3">
+                <strong>Market Risk:</strong> The overall stock market can decline, affecting the value of even
+                well-performing companies.
+              </li>
+              <li class="mb-3">
+                <strong>Company-Specific Risk:</strong> A particular company's stock may perform poorly due to
+                management issues, competition, or industry downturns.
+              </li>
+              <li class="mb-3">
+                <strong>Liquidity Risk:</strong> While generally liquid, some stocks may be difficult to sell quickly
+                without affecting their price, especially in smaller or less traded companies.
+              </li>
+              <li>
+                <strong>Inflation Risk:</strong> Although equity can be an inflation hedge, unexpected high inflation
+                can still erode returns.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-12 mt-4">
+        <div class="bg-white p-4 p-md-5 rounded-4 ">
+          <div class="row align-items-center">
+            <!-- Text Content Left -->
+            <div class="col-md-7">
+              <h4 class="fw-bold text-dark-blue mb-4">How to Get Started with Equity Investing</h4>
+              <ul class="list-unstyled text-dark ps-2">
+                <li class="mb-3">
+                  <strong>Educate Yourself:</strong> Learn the basics of investing, market dynamics, and financial
+                  analysis.
+                </li>
+                <li class="mb-3">
+                  <strong>Define Your Goals:</strong> Determine your financial objectives, risk tolerance, and
+                  investment
+                  horizon.
+                </li>
+                <li class="mb-3">
+                  <strong>Open a Demat & Trading Account:</strong> These are essential for holding shares electronically
+                  and executing trades.
+                </li>
+                <li class="mb-3">
+                  <strong>Research Companies:</strong> Investigate companies thoroughly before investing. Look at their
+                  financial health, management, industry outlook, and competitive advantages.
+                </li>
+                <li class="mb-3">
+                  <strong>Start Small and Diversify:</strong> Begin with a manageable amount and spread your investments
+                  across different companies and sectors to mitigate risk.
+                </li>
+                <li>
+                  <strong>Monitor and Review:</strong> Regularly review your portfolio's performance and make
+                  adjustments
+                  as needed based on market conditions and your financial goals.
+                </li>
+              </ul>
+            </div>
+            <!-- Image Right -->
+            <div class="col-md-5 text-center mt-4 mt-md-0">
+              <img src="assets/img/startequ1.png" alt="How to Start Equity Investing" class="img-fluid rounded-3 ">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-12 mt-4">
+        <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm text-center">
+          <h5 class="fw-bold text-dark-blue mb-1">Ready to Explore Equity?</h5>
+          <p class="text-muted mb-4">
+            Investing in equity can be a powerful tool for achieving your financial aspirations. We encourage you to
+            explore our resources, consult with a financial advisor, and begin your journey towards building a stronger
+            financial future.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-2">
+            <a href="#" class="btn btn-primary">Open an Account</a>
+            <a href="#" class="btn btn-outline-secondary">Learn More About Our Services</a>
+            <a href="#" class="btn btn-outline-secondary">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

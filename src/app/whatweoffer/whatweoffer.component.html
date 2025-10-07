@@ -1,0 +1,50 @@
+<div class="container-fluid py-5">
+    <div class="row align-items-center">
+
+        <!-- Left Column -->
+        <div class="col-lg-4 mb-4 mb-lg-0 text-center text-lg-start">
+            <h2 class="fw-bold display-5 text-dark-blue">What We Offer</h2>
+            <p class="fs-4 text-dark-blue">Smart Broking & Wealth Care</p>
+        </div>
+
+        <!-- Right Column: Carousel -->
+        <div class="col-lg-8">
+            <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-inner">
+
+                    <div *ngFor="let slide of chunkedServices; let i = index" class="carousel-item"
+                        [class.active]="i === 0">
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6 col-lg-4" *ngFor="let service of slide">
+                                <div class="card h-100" style="border-radius: 20px;">
+                                    <div class="card-body d-flex flex-column">
+                                        <div class="fs-2 text-primary mb-3">{{ service.icon }}</div>
+                                        <h5 class="card-title text-dark-blue fw-semibold">{{ service.title }}</h5>
+                                        <p class="card-text text-muted">{{ service.desc }}</p>
+                                        <a class="btn btn-outline-primary rounded-pill mt-auto" [href]="service.link"
+                                            target="_blank">
+                                            Know More ➔
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#servicesCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#servicesCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+</div>

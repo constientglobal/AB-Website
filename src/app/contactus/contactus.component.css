@@ -1,0 +1,37 @@
+.key-management-container {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  padding: 40px 0;
+}
+
+.slider-wrapper {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+}
+
+.slider {
+  display: flex;
+}
+
+.card {
+  flex: 0 0 25%;
+  padding: 10px;
+    border: none !important;  /* Remove any border */
+  box-shadow: none !important;
+}
+
+.card-inner {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.card-inner img {
+  width: 100%;
+  border-radius: 10px;
+}

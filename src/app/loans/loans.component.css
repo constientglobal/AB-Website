@@ -1,0 +1,16 @@
+.main-header {
+      padding: 20px 0;
+      text-align: center;
+      border-radius: 6px;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #012970;
+    }
+    .card-title {
+      color: #012970;
+    }
+    .accordion-button:not(.collapsed) {
+      color: white;
+      background-color: #012970;
+    }

@@ -1,0 +1,281 @@
+<footer id="footer" class="footer mt-3">
+
+  <div class="footer-newsletter">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-6">
+          <h4>Join Our Newsletter</h4>
+          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer-top">
+    <div class="row gy-4">
+      <div class="col-lg-3 col-md-6 footer-about">
+        <a href="#" class="logo d-flex align-items-center me-auto">
+          <img src="assets/img/logoheader2.png" alt="" width="200">
+        </a>
+        <div class="footer-contact pt-3">
+          <strong>Phone:</strong>
+          <p>044 4796 1590</p>
+          <strong>For investor queries:</strong>
+          <p><a href="mailto:support@absolutebroking.com"
+              style="color:black;font-size: 15px;">support&#64;absolutebroking.com</a></p>
+          <strong>For investor grievances:</strong>
+          <p><a href="mailto:grievance@absolutebroking.com"
+              style="color:black;font-size: 15px;">grievance&#64;absolutebroking.com</a></p>
+          <strong>For investor compliances:</strong>
+          <p><a href="mailto:compliance@absolutebroking.com"
+              style="color:black;font-size: 15px;">compliance&#64;absolutebroking.com</a></p>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 footer-links">
+  <h4>Products</h4>
+  <ul class="list-unstyled">
+
+    <!-- Broking Dropdown -->
+    <li>
+      <a data-bs-toggle="collapse" href="#brokingCollapse" role="button" aria-expanded="false" aria-controls="brokingCollapse" class="d-flex align-items-center">
+        <i class="bi bi-chevron-right me-1"></i> Broking
+      </a>
+      <ul class="collapse ps-4" id="brokingCollapse">
+        <li><a routerLink="/equity">Equity</a></li>
+        <li><a routerLink="/commodity">Commodity</a></li>
+        <li><a routerLink="/currency">Currency</a></li>
+      </ul>
+    </li>
+
+    <!-- Other Links -->
+    <li><i class="bi bi-chevron-right"></i> <a routerLink="/mtf">MTF</a></li>
+    <li><i class="bi bi-chevron-right"></i> <a routerLink="/dp">DP</a></li>
+    <li><i class="bi bi-chevron-right"></i> <a routerLink="/insurance">Insurance</a></li>
+    <li><i class="bi bi-chevron-right"></i> <a routerLink="/ipo">IPO</a></li>
+    <li><i class="bi bi-chevron-right"></i> <a routerLink="/loans">Loans</a></li>
+    <li><i class="bi bi-chevron-right"></i> <a routerLink="/mutualfund">Mutual Funds</a></li>
+
+    <!-- Wealth Dropdown -->
+    <li>
+      <a data-bs-toggle="collapse" href="#wealthCollapse" role="button" aria-expanded="false" aria-controls="wealthCollapse" class="d-flex align-items-center">
+        <i class="bi bi-chevron-right me-1"></i> Wealth
+      </a>
+      <ul class="collapse ps-4" id="wealthCollapse">
+        <li><a routerLink="/privateEquity">Private Equity</a></li>
+        <li><a routerLink="/pmsandaif">PMS/AIF</a></li>
+        <li><a routerLink="/fixedincome">Fixed Income</a></li>
+      </ul>
+    </li>
+
+  </ul>
+</div>
+
+      <div class="col-lg-2 col-md-3 footer-links">
+        <h4>Company</h4>
+        <ul>
+          <li><i class="bi bi-chevron-right"></i> <a routerLink="/contactUs">Contact Us</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a routerLink="/about">Our Team</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a routerLink="/career">Careers</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a routerLink="/t&c">Terms & Conditions</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="#">Downloads</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="#">Partner</a></li>
+          <!-- <li><i class="bi bi-chevron-right"></i> <a href="#">Blog</a></li> -->
+          <li><i class="bi bi-chevron-right"></i> <a routerLink="/News&Media">News & Media</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="#">FAQ's</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-3 footer-links">
+        <h4>Knowledge Hub</h4>
+        <ul>
+          <li><i class="bi bi-chevron-right"></i> <a href="#" style="line-height: inherit;">How to open a Demat Account?</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="#">Stocks</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="#">Tutorial</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="#">Investments</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a routerLink="/WhatweOffer">What we Offer</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-3 footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><i class="bi bi-chevron-right"></i> <a href="https://www.absolutebroking.com/KYCUI/register">Open Demat
+              Account</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a routerLink="/calculator">Calculators</a></li>
+          <!-- <li><i class="bi bi-chevron-right"></i> <a routerLink="/">Top Gainers</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a routerLink="/">Holidays</a></li> -->
+        </ul>
+      </div>
+      <hr>
+      <div class="col-lg-12 col-md-12 d-flex justify-content-between align-items-center">
+        <h4>Connect With Us</h4>
+        <div class="social-links d-flex">
+          <a href=""><i class="bi bi-whatsapp"></i></a>
+          <a href=""><i class="bi bi-youtube"></i></a>
+          <a href="https://x.com/BrokingLtd59162"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61575003090422"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/absolute_broking_/"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/absolute-broking-pvt-ltd/"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="col-lg-12 col-md-12 mt-5">
+      <h2>Filing Complaints on SCORES – Easy, Transparent & Efficient</h2>
+      <p class="text-black">
+        The SEBI Complaints Redress System (SCORES) is an empowering initiative by the Securities and
+        Exchange Board
+        of India
+        (SEBI) designed to provide investors with a simple, transparent, and effective means to raise
+        their
+        concerns
+        and
+        grievances related to India's capital markets. SCORES offers a centralized online platform where
+        investors can
+        lodge
+        complaints against listed companies and SEBI-registered intermediaries in a user-friendly and
+        completely
+        digital
+        environment. To initiate a complaint, investors must first register on the | <a class="text-decoration-none"
+          style="color:#4154f1;font-weight: bolder;" href="https://scores.sebi.gov.in/" target="_blank">SCORES</a> |
+        portal by visiting
+        https://scores.gov.in, where they can create an account using a valid email ID and mobile
+        number.
+        During
+        registration,
+        it is mandatory to provide key details including the full name as per PAN, PAN number,
+        registered
+        address,
+        mobile
+        number, and a valid email ID. Once the registration process is complete, investors can log in to
+        the
+        portal to
+        describe their grievance in detail, attach any relevant supporting documents, and submit the
+        complaint
+        directly to the
+        concerned intermediary or listed company. SCORES not only ensures the efficiency of the redress
+        process
+        through
+        time-bound resolution mechanisms but also offers complete transparency, allowing complainants to
+        track the
+        real-time
+        status of their complaints. It acts as a direct channel of communication between the investor,
+        the
+        involved
+        entity,
+        and SEBI’s regulatory oversight, ensuring accountability at every step. Additionally, the
+        platform
+        is entirely
+        paperless, secure, and convenient, eliminating the need for physical documentation and visits.
+        By
+        leveraging
+        technology, SCORES significantly enhances investor protection and reinforces trust in the
+        financial
+        markets by
+        ensuring grievances are addressed promptly and fairly.
+      </p>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <h6 style="font-weight: bold;">Disclaimer:</h6>
+        <p>Investment in securities market are subject to market risks, read all
+          the related documents carefully before investing.</p>
+
+        <h6 class="mt-3" style="font-weight: bold;">Registered Office:</h6>
+        <p>Shri Devi Park, No 1 Ground Floor, Hanumantha road, Thyagaraya Nagar,
+          Chennai, Tamil Nadu, India-600017.</p>
+
+        <h6 style="font-weight: bold;">Corporate Office:</h6>
+        <p>No 4/8, North Crescent Road, Thyagaraya Nagar, Chennai, Tamil Nadu,
+          India-600017.</p>
+
+        <p>
+          SEBI Stock Broker Reg No: INZ000317833, <br> Depository Participant Reg No: IN-DP-789-2024, 
+          AMFI Reg No: 286383
+        </p>
+
+        <h6 style="font-weight: bold;">Member:</h6>
+        <p>BSE: 6869 | NSE: 90421 | MCX: 57370</p>
+
+        <h6 class="mt-4" style="font-weight: bold;  ">BEWARE OF SUSPICIOUS PHONE CALLS AND FRAUDULENT
+          OFFERS:</h6>
+        <p>
+          IRDAI is not involved in activities like selling insurance policies, announcing bonus,
+          or
+          investment of premiums. Public receiving such phone calls are requested to lodge a
+          police
+          complaint.
+        </p>
+      </div>
+      <div class="col-md-6 mb-4">
+        <h5 class="fw-bold">ATTENTION INVESTOR</h5>
+        <ul class="text-black ps-3">
+          <li>
+            <p><strong>Invest smart, stay informed.</strong> Validate transactions via OTP sent to your
+              registered mobile/email.</p>
+          </li>
+          <li>
+            <p><strong>Keep contact details updated.</strong> Receive timely alerts.</p>
+          </li>
+          <li>
+            <p><strong>20% upfront margin</strong> is mandatory for trading in cash segment as per
+              SEBI.</p>
+          </li>
+          <li>
+            <p>Refer to <a href="#" style="color:#4154f1; font-weight: bold;">Exchange FAQs</a> and
+              circulars for compliance updates.</p>
+          </li>
+          <li>
+            <p>Check your securities in the monthly CAS issued by NSDL.</p>
+          </li>
+          <li>
+            <p><strong>Prevent fraud:</strong> Don’t share login credentials. Keep contact info
+              up-to-date.</p>
+          </li>
+          <li>
+            <p>Alerts will be sent for all debit transactions in your demat account.</p>
+          </li>
+          <li>
+            <p><strong>Grievances:</strong> Email <a href="mailto:grievanceabsolutebroking.com"
+                style="color:#4154f1; font-weight: bold;">grievance&#64;absolutebroking.com</a>. If
+              unresolved in 21 days, escalate via <a href="https://scores.sebi.gov.in/" target="_blank"
+                style="color:#4154f1; font-weight: bold;">SCORES</a>.</p>
+          </li>
+          <li>
+            <p><strong>Note:</strong> By registering your mobile/email, you authorize alerts via
+              SMS/Email/WhatsApp. Opt-out anytime.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footerlink" style="display: flex;gap:15px; cursor: pointer;">
+      <span class="colas"><a routerLink="/charter" routerLinkActive="active-link" class="btn-get-started">Investor
+          Charter</a></span>
+      <span class="colas"><a routerLink="/awarness" routerLinkActive="active-link" class="btn-get-started">Investor
+          Awarness</a></span>
+      <span class="colas"><a routerLink="/security" routerLinkActive="active-link" class="btn-get-started">Security
+          Tips</a></span>
+      <span class="colas"><a routerLink="/disclaimer" routerLinkActive="active-link"
+          class="btn-get-started">Disclaimer</a></span>
+      <span class="colas"><a routerLink="/policy" class="btn-get-started">Privace Policy</a></span>
+      <span class="colas"><a routerLink="/cookies" class="btn-get-started">Cookies Policy</a></span>
+      <span class="colas"><a routerLink="/t&c" class="btn-get-started">Terms & Conditions</a></span>
+      <span class="colas"><a href="https://scores.sebi.gov.in/" target="_blank"
+          class="btn-get-started">Scores</a></span>
+      <span class="colas"><a routerLink="/odr" class="btn-get-started">Online Dispute Resolution (ODR)</a></span>
+      <span class="colas"><a routerLink="/dnd" class="btn-get-started">DND Policy</a></span>
+    </div>
+  </div>
+
+  <div class="container copyright text-center mt-4">
+    <p>© <span>Copyright</span> <strong class="px-1 sitename">AbsoluteBroking</strong> <span>All Rights Reserved</span>
+    </p>
+
+  </div>
+
+</footer>

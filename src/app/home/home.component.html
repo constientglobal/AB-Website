@@ -1,0 +1,184 @@
+<section id="hero" class="hero section">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+        <h3 class="fw-bold">SMART BROKING & WEALTH CARE</h3>
+        <p>
+          <span class="zoho-letter letter-p" style="color: #00d93d;">P</span><span class="zoho-line fw-bold" style="color: #0271fe;">artner in </span>
+          <span class="zoho-letter letter-m" style="color: #00d93d;">M</span><span class="zoho-line fw-bold" style="color: #0271fe;">anaging </span>
+          <span class="zoho-letter letter-g" style="color: #00d93d;">G</span><span class="zoho-line fw-bold" style="color: #0271fe;">rowth...</span>
+        </p>
+        <div class="d-flex flex-column flex-md-row">
+          <a href="https://www.absolutebroking.com/KYCUI/register" class="btn-get-started">Get Started <i
+              class="bi bi-arrow-right"></i></a>
+          <!-- <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
+            class="glightbox btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0"><i
+              class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
+        </div>
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2 hero-img">
+        <img [src]="'assets/img/hero-img.png'" class="img-fluid animated" alt="">
+      </div>
+    </div>
+  </div>
+
+</section>
+<section id="about" class="about section">
+  <div class="container">
+    <div class="row gx-0">
+
+      <!-- Image Column (now on left) -->
+      <div class="col-lg-6 position-relative d-flex align-items-center justify-content-center" pAnimateOnScroll
+        style="height: 300px;">
+        <img src="assets/img/seamlessbroking.png" class="img-fluid w-75 h-auto" alt="Seamless Broking">
+      </div>
+
+      <!-- Content Column (now on right) -->
+      <div class="col-lg-6 d-flex flex-column justify-content-center position-relative" pAnimateOnScroll
+        style="background: url('assets/img/hero-bg.png') no-repeat center center; background-size: cover;">
+        <div class="content p-4">
+          <h3>SEAMLESS BROKING</h3>
+          <!-- <h2>Absolute Broking offers seamless investing with user-friendly interface and advanced technology.</h2> -->
+          <p>
+            At Absolute Broking Private Limited, we understand that in today's fast-paced markets, efficiency and ease
+            of access are paramount. Our "Seamless Broking" experience is designed to provide you with an intuitive,
+            reliable, and swift platform to execute your trading strategies, ensuring you never miss an opportunity.
+          </p>
+          <div class="text-center text-lg-start">
+            <a routerLink="/seamlessbroking"
+              class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+              <span>More</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="values" class="values section">
+
+  <!-- Section Title -->
+  <div class="container section-title">
+    <!-- <h2>Financial Service Provider</h2> -->
+    <!-- <p>Absolute Broking is one of the fastest growing stock broking company.<br></p> -->
+    <p>Absolute Broking - Where your wealth grows</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+    <p-carousel [value]="product" [numVisible]="3" [numScroll]="1" [circular]="true" [autoplayInterval]="3000"
+      [responsiveOptions]="[
+    { breakpoint: '1200px', numVisible: 2, numScroll: 1 },
+    { breakpoint: '768px', numVisible: 1, numScroll: 1 }
+  ]">
+      <ng-template let-prod pTemplate="item">
+        <div class="p-2" style="cursor: pointer;" (click)="prodRedirect(prod.header)">
+          <div class="card h-100 shadow-sm">
+            <div class="ratio ratio-16x9 overflow-hidden">
+              <img [src]="prod.image" class="img-fluid object-fit-cover" alt="{{ prod.header }}" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{ prod.header }}</h5>
+              <p class="card-text text-muted small">{{ prod.message }}</p>
+              <div class="d-flex flex-wrap gap-2 mt-2">
+                <a *ngFor="let sub of prod.category" href="javascript:void(0)"
+                  (click)="prodRedirect(sub); $event.stopPropagation()" class="btn btn-outline-primary btn-sm">{{ sub
+                  }}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+</section>
+
+<section id="features" class="features section py-5">
+  <!-- Section Title -->
+  <div class="container section-title  text-center mb-4">
+    <h3 class="fs-4  fw-bold">Transform your options into opportunities</h3>
+  </div>
+
+  <div class="container">
+    <div class="row gy-4 align-items-center">
+
+      <!-- Left Image -->
+      <div class="col-xl-4 col-lg-5 text-center">
+        <img src="assets/img/Process-cuate.png" class="img-fluid" style="max-height: 400px; width: auto;" alt="">
+      </div>
+      <!-- Right Content with Background -->
+      <div class="col-xl-8 col-lg-7">
+        <div class="p-4 text-dark" style="
+            min-height: 300px;
+            background-image: url('assets/img/hero-bg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 8px;
+        ">
+          <p class="mb-0">
+            Discover the power to turn your options into boundless opportunities with Absolute Broking. Our innovative
+            platform empowers you to explore diverse investment avenues, seize market trends, and capitalize on
+            potential gains. Whether you're a seasoned trader or a novice investor, our comprehensive tools and expert
+            guidance ensure you make informed decisions. Elevate your trading experience with Absolute Broking and
+            unlock a world of possibilities in the financial markets.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center" style="margin-top: 30px;">
+      <h1 class="text-black" style="font-weight: 900;">Invest & Trade with <span class="text-primary">ABSOLUTE
+          BRO<span style="color: #00d93d;">K</span>ING</span></h1>
+      <p>Contact with our expertise to create a Demat Account</p>
+    </div>
+  </div>
+</div>
+
+<!-- alert.component.html -->
+<div class="alert-overlay d-flex justify-content-center align-items-center" *ngIf="homepageAlert">
+  <div class="alert-box shadow-lg rounded-4 bg-light animate__animated animate__fadeInDown"
+    style="max-width: 900px; width: 100%;">
+    <div class="alert-header bg-white text-primary-emphasis px-4 py-3 rounded-top border-bottom">
+      <h4 class="mb-0 fw-bold"><i class="bi bi-exclamation-triangle-fill me-2"></i>Urgent Alert</h4>
+    </div>
+    <div class="alert-content px-4 py-4">
+      <h5 class="fw-semibold mb-3 text-dark">
+        Fraudulent Investment Schemes Impersonating Absolute Broking Pvt Ltd / ABPL
+      </h5>
+      <div class="alert-body-scroll" style="max-height: 300px; overflow-y: auto;">
+        <p class="text-secondary mb-3">
+          We have been made aware that fraudsters are misusing the names <strong>"Absolute Broking"</strong> and
+          <strong>"ABPL"</strong>
+          to lure individuals with fake investment schemes and promises of high returns. Please be advised that these
+          are fraudulent activities.
+          We have reported these incidents to the authorities. Do not fall victim to these scams. Absolute Broking /
+          ABPL does not offer such investment schemes.
+        </p>
+        <p class="text-secondary mb-3">
+          Protect yourself from financial fraud. Always verify the legitimacy of any investment offer directly with our
+          official website
+          <a href="https://www.absolutebroking.com" class="fw-semibold text-decoration-underline text-primary"
+            target="_blank">www.absolutebroking.com</a>
+          or contact our authorized representatives at
+          <a href="mailto:support@absolutebroking.com"
+            class="fw-semibold text-decoration-underline text-primary">support&#64;absolutebroking.com</a>.
+        </p>
+        <div class="alert-warning-box text-danger fw-bold ps-3 py-2 rounded">
+          <marquee behavior="" direction="">Please be advised that our website is currently undergoing active
+            development. Access may be limited. We have not yet begun onboarding new clients. Stay tuned for further
+            updates.</marquee>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <button class="btn btn-primary px-5 fw-semibold" (click)="alertClose()">Okay</button>
+      </div>
+    </div>
+  </div>
+</div>

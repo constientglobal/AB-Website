@@ -1,0 +1,268 @@
+<section id="contact" class="py-5" style="margin-top: 100px;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-dark-blue">Contact Us</h2>
+      <p class="text-muted">We're here to help. Reach out anytime.</p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Contact Info -->
+      <div class="col-lg-6">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+              <div class="d-flex align-items-start">
+                <i class="bi bi-geo-alt text-primary fs-2 me-3"></i>
+                <div>
+                  <h6 class="fw-semibold mb-1">CORPORATE OFFICE</h6>
+                  <p class="small mb-1">No 4/8,North Crescent Road,</p>
+                  <p class="small mb-1">Thyagaraya Nagar,Chennai,</p>
+                  <p class="small mb-1">Tamil Nadu, India-600017.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+              <div class="d-flex align-items-start">
+                <i class="bi bi-telephone text-primary fs-2 me-3"></i>
+                <div class="mt-3">
+                  <h6 class="fw-semibold mb-1">Customer Support</h6>
+                  <p class="small mb-1 mt-3">044 4796 1590</p>
+                  <!-- <p class="small mb-1">+91 99945 91514</p> -->
+                  <!-- <p class="small mb-1">+91 99945 97414</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+              <div class="d-flex align-items-start">
+                <i class="bi bi-envelope text-primary fs-2 me-3"></i>
+                <div>
+                  <h6 class="fw-semibold mb-1">Email Us</h6>
+                  <p class="mb-0 small text-muted">support&#64;absolutebroking.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+              <div class="d-flex align-items-start">
+                <i class="bi bi-clock text-primary fs-2 me-3"></i>
+                <div>
+                  <h6 class="fw-semibold mb-1">Open Hours</h6>
+                  <p class="mb-0 small text-muted">Monday - Friday</p>
+                  <p class="small text-muted">10:00 AM - 05:00 PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-lg-6">
+        <div class="card border-0 shadow-sm rounded-4 p-4">
+          <form (ngSubmit)="sendContactForm()" #contactForm="ngForm" class="php-email-form">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input type="text" name="name" class="form-control" placeholder="Your Name" [(ngModel)]="contact.name"
+                  required>
+              </div>
+
+              <div class="col-md-6">
+                <input type="email" name="email" class="form-control" placeholder="Your Email"
+                  [(ngModel)]="contact.email" required>
+              </div>
+
+              <div class="col-md-6 my-2">
+                <input type="text" name="phone" class="form-control" maxlength="10" placeholder="Phone"
+                  [(ngModel)]="contact.phone">
+              </div>
+
+              <div class="col-md-6 my-2">
+                <input type="text" name="address" class="form-control" placeholder="Address"
+                  [(ngModel)]="contact.address">
+              </div>
+
+              <div class="col-md-6 my-2">
+                <input type="text" name="area" class="form-control" placeholder="Area" [(ngModel)]="contact.area">
+              </div>
+
+              <div class="col-md-6 my-2">
+                <input type="text" name="city" class="form-control" placeholder="City" [(ngModel)]="contact.city">
+              </div>
+
+              <div class="col-md-6 my-2">
+                <input type="text" name="pincode" class="form-control" placeholder="Pin Code"
+                  [(ngModel)]="contact.pincode" maxlength="7">
+              </div>
+
+              <div class="col-12">
+                <textarea name="message" class="form-control" rows="5" placeholder="Your Message"
+                  [(ngModel)]="contact.message" required></textarea>
+              </div>
+
+              <div class="col-12 text-center">
+                <div *ngIf="loading" class="text-info mb-2">Sending your message...</div>
+                <div *ngIf="errorMessage" class="text-danger mb-2">{{ errorMessage }}</div>
+                <div *ngIf="successMessage" class="text-success mb-2">{{ successMessage }}</div>
+
+                <button type="submit" class="btn btn-primary px-4 mt-2" [disabled]="loading">Send Message</button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="container-fluid px-0">
+        <div class="card border-0 shadow-sm rounded-4">
+          <div class="card-body p-4">
+
+            <!-- Key Management Header -->
+            <h3 class="text-dark-blue fw-bold text-center mb-4">Key Management Personnel</h3>
+
+            <!-- Management Cards -->
+            <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+
+              <div class="col">
+                <div class="p-3 border rounded-3 h-100">
+                  <p class="h6 fw-bold mb-3">Karthik KS <span class="text-muted">(CEO)</span></p>
+                  <p class="mb-2">
+                    <i class="bi bi-telephone-fill text-primary me-2"></i>
+                    <a href="tel:9345670003" class="text-decoration-none text-dark">9345670003</a>
+                  </p>
+                  <p>
+                    <i class="bi bi-envelope-fill text-primary me-2"></i>
+                    <a href="mailto:karthik.ks@absolutebroking.com"
+                      class="text-decoration-none text-dark">karthik.ks&#64;absolutebroking.com</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="p-3 border rounded-3 h-100">
+                  <p class="h6 fw-bold mb-3">Karthikeyan D <span class="text-muted">(CBO)</span></p>
+                  <p class="mb-2">
+                    <i class="bi bi-telephone-fill text-primary me-2"></i>
+                    <a href="tel:8939759874" class="text-decoration-none text-dark">8939759874</a>
+                  </p>
+                  <p>
+                    <i class="bi bi-envelope-fill text-primary me-2"></i>
+                    <a href="mailto:karthikeyan.devaraj@absolutebroking.com"
+                      class="text-decoration-none text-dark">karthikeyan.devaraj&#64;absolutebroking.com</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="p-3 border rounded-3 h-100">
+                  <p class="h6 fw-bold mb-3">Neethin Kumar <span class="text-muted">(Head - Support)</span></p>
+                  <p class="mb-2">
+                    <i class="bi bi-telephone-fill text-primary me-2"></i>
+                    <a href="tel:9884812282" class="text-decoration-none text-dark">9884812282</a>
+                  </p>
+                  <p>
+                    <i class="bi bi-envelope-fill text-primary me-2"></i>
+                    <a href="mailto:neethin@absolutebroking.com"
+                      class="text-decoration-none text-dark">neethin&#64;absolutebroking.com</a>
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- <div class="key-management-container">
+              <h2 class="text-center text-dark-blue fw-bold mb-4">Key Management</h2> 
+              <div class="slider-wrapper">
+                <div class="slider"
+                  [ngStyle]="{'transform': updateSlider(), 'transition':'transform 0.5s ease-in-out'}">
+                  <div class="card" *ngFor="let director of directors">
+                    <div class="card-inner">
+                      <img [src]="director.img" [alt]="director.alt" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Escalation Matrix -->
+            <h3 class="text-dark-blue fw-bold  text-center mt-2 mb-3">Escalation Matrix</h3>
+            <div class="table-responsive">
+              <table class="table table-hover text-center align-middle">
+                <thead class="table-primary">
+                  <tr>
+                    <th>Escalation Level</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Working Hours</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Customer Care</td>
+                    <td>Jeeva B</td>
+                    <td><a href="mailto:jeeva.b@absolutebroking.com">support&#64;absolutebroking.com</a></td>
+                    <td><a href="tel:8072819521">8072819521</a></td>
+                    <td>10AM - 5PM</td>
+                  </tr>
+                  <tr>
+                    <td>Head of Customer Care</td>
+                    <td>Neethin Kumar</td>
+                    <td><a href="mailto:neethin@absolutebroking.com">grivance&#64;absolutebroking.com</a></td>
+                    <td><a href="tel:9884812282">9884812282</a></td>
+                    <td>10AM - 5PM</td>
+                  </tr>
+                  <tr>
+                    <td>Compliance Head</td>
+                    <td>Karthik KS</td>
+                    <td><a href="mailto:karthik.ks@absolutebroking.com">karthik.ks&#64;absolutebroking.com</a></td>
+                    <td><a href="tel:9345670003">9345670003</a></td>
+                    <td>10AM - 5PM</td>
+                  </tr>
+                  <!-- <tr>
+                    <td>Management</td>
+                    <td>Karthikeyan D</td>
+                    <td><a
+                        href="mailto:karthikeyan.devaraj@absolutebroking.com">karthikeyan.devaraj&#64;absolutebroking.com</a>
+                    </td>
+                    <td><a href="tel:8939759874">8939759874</a></td>
+                    <td>10AM - 5PM</td>
+                  </tr> -->
+                </tbody>
+              </table>
+            </div>
+            <!-- Escalation Notice -->
+            <div class="mt-4 text-center">
+              <p class="mb-1">If your complaint is not addressed to your satisfaction, you may lodge a complaint with:
+              </p>
+              <div class="d-flex flex-wrap justify-content-center gap-3">
+                <a href="https://scores.sebi.gov.in/" target="_blank" class="text-primary text-decoration-none">SEBI</a>
+                <a href="https://bsecrs.bseindia.com/ecomplaint/frmInvestorHome.aspx" target="_blank"
+                  class="text-primary text-decoration-none">BSE</a>
+                <a href="https://investorhelpline.nseindia.com/NICEPLUS/" target="_blank"
+                  class="text-primary text-decoration-none">NSE</a>
+                <a href="#" class="text-primary text-decoration-none">NSDL</a>
+                <a href="https://www.mcxindia.com/Investor-Services" target="_blank"
+                  class="text-primary text-decoration-none">MCX</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</section>

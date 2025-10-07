@@ -1,0 +1,36 @@
+<div class="container my-4">
+
+    <!-- Hero Banner -->
+    <div class="position-relative rounded overflow-hidden">
+        <img src="assets/img/image.png" alt="News Media Banner" class="img-fluid w-100">
+
+        <!-- Arrows -->
+        <div class="position-absolute bottom-0 end-0 d-flex gap-2 p-3">
+            <button class="btn btn-light rounded-circle p-0 d-flex align-items-center justify-content-center"
+                style="width: 35px; height: 35px;">
+                &#8592;
+            </button>
+            <button class="btn btn-light rounded-circle p-0 d-flex align-items-center justify-content-center"
+                style="width: 35px; height: 35px;">
+                &#8594;
+            </button>
+        </div>
+    </div>
+
+    <!-- Latest Posts -->
+    <div class="mt-5">
+        <h2 class="fs-4 mb-3 fw-bold">Latest Posts</h2>
+        <p-carousel [value]="posts" [numVisible]="3" [numScroll]="1" [autoplayInterval]="5000" [circular]="true">
+            <ng-template pTemplate="item" let-post>
+                <div class="news-card">
+                    <img [src]="post.image" alt="Post Image" class="img-fluid w-100 rounded-top">
+                    <div class="p-3">
+                        <h3 class="fs-5 mb-1 text-dark">{{ post.title }}</h3>
+                        <p class="text-muted small mb-3">{{ post.subtitle }}</p>
+                        <a href="#" class="btn btn-dark btn-sm rounded-2 fw-medium">Read</a>
+                    </div>
+                </div>
+            </ng-template>
+        </p-carousel>
+    </div>
+</div>

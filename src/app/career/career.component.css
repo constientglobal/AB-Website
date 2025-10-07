@@ -1,0 +1,53 @@
+.bi-check-circle {
+  font-size: 20px;
+  margin-right: 8px;
+  color: var(--accent-color);
+}
+.card-hover {
+  transition: all 0.3s ease-in-out;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+  height: 140px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card-body {
+  padding: 0.75rem;
+}
+
+.card-title {
+  font-size: 1rem;
+}
+
+.card-text {
+  font-size: 0.875rem;
+}
+
+
+/* Optional: Add minimal padding or hover effects */
+select.form-select {
+  max-width: 300px;
+}
+
+.card-hover:hover {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+#positionSelect {
+  min-width: 260px;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+#positionSelect:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}

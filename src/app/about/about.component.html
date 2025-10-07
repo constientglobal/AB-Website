@@ -1,0 +1,252 @@
+<section id="features" class="features section">
+
+  <!-- Section Title -->
+  <!-- <div class="container section-title"> -->
+  <h2 class="fw-bold text-center mb-5">OUR JOURNEY</h2>
+  <!-- </div> -->
+
+  <div class="container">
+
+    <div class="row gy-5">
+
+      <div class="col-xl-6">
+        <p>Founded on October 25th, 2023, by visionary entrepreneur Mr. PM Gurudas, in collaboration with tech-savvy
+          finance professionals Mr. Karthik KS and Mr. Karthikeyan D, Absolute Broking Private Limited (ABPL) is
+          revolutionizing the finance and technology landscape.</p>
+        <a href="javascript:void(0)" (click)="scrollTo('exploreMore')" class="btn-get-started">Explore More <i
+            class="bi bi-arrow-right"></i></a>
+      </div>
+
+      <div class="col-xl-6 d-flex">
+        <div class="row align-self-center gy-4">
+
+          <div class="col-md-6">
+            <div class="feature-box d-flex align-items-center">
+              <img src="assets/img/front.jpg" alt="" class="img-fluid" />
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-md-6">
+            <div class="feature-box d-flex align-items-center">
+              <img src="assets/img/team.png" alt="" class="img-fluid" />
+            </div>
+          </div><!-- End Feature Item -->
+
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Stats Section -->
+<section id="exploreMore" class="stats section">
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-12 col-md-12">
+        <div class="stats-item d-flex align-items-center w-100 h-100">
+
+          <div>
+            <span class="purecounter"></span>
+            <div class="hed text-center">
+              <i class="bi bi-emoji-smile color-blue flex-shrink-0" style="font-size: 50px;"></i>
+              <p style="font-size: 30px;">About Us</p>
+            </div>
+            <div class="cont mt-3">
+              <p>Our mission is to seamlessly bridge the gap between finance and technology, creating an efficient
+                ecosystem for diverse financial transactions. We offer a comprehensive suite of services including
+                Equity, Commodity, and Currency broking, along with the distribution of Mutual Funds (MF), Portfolio
+                Management Services (PMS), Alternative Investment Funds (AIF), Fixed Income products, Loans, and
+                Insurance. We cater to both retail and HNI clients through our B2C and B2B channels.</p><br>
+              <p>Starting operations from PMG's Shridevi Park Office, ABPL quickly gained significant momentum. We
+                secured AMFI registration, SEBI registration as a stock broker, and obtained membership with BSE, NSE,
+                and NSDL as a Depository Participant. Driven by increasing demand, we swiftly transitioned to a
+                dedicated corporate office in T Nagar, Chennai, and expanded our team with dedicated professionals.</p>
+              <br>
+              <p>ABPL is deeply committed to digital transformation within the Indian financial sector. Our dedication
+                to innovation and a strong customer-centric approach is establishing us as a trailblazer. We are
+                continuously exploring advanced technologies, expanding our product offerings, and redefining how
+                individuals and businesses engage with financial services. Our journey, though brief, powerfully
+                illustrates the evolving impact of technology on India's financial landscape.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <section id="team" class="team section">
+
+    <!-- Section Title -->
+    <div class="container section-title">
+      <h2>Meet Our Directors</h2>
+    </div><!-- End Section Title -->
+
+
+    <div class="container">
+      <p-carousel [value]="directorsInfo" [numVisible]="4" [numScroll]="2" [circular]="true" [autoplayInterval]="5000"
+        [responsiveOptions]="[
+    { breakpoint: '1199px', numVisible: 3, numScroll: 1 },
+    { breakpoint: '991px', numVisible: 2, numScroll: 1 },
+    { breakpoint: '767px', numVisible: 1, numScroll: 1 }
+  ]" styleClass="mb-5">
+        <ng-template let-director pTemplate="item">
+          <div class="director-card p-3 h-100">
+            <div class="team-member shadow rounded overflow-hidden h-100 d-flex flex-column">
+              <div class="member-img position-relative">
+                <img [src]="director.image" class="img-fluid w-100" alt="Director Image">
+                <div class="social position-absolute top-0 end-0 p-2">
+                  <a *ngIf="director.twitter" [href]="director.twitter" target="_blank"><i
+                      class="bi bi-twitter-x"></i></a>
+                  <a *ngIf="director.facebook" [href]="director.facebook" target="_blank"><i
+                      class="bi bi-facebook"></i></a>
+                  <a *ngIf="director.insta" [href]="director.insta" target="_blank"><i class="bi bi-instagram"></i></a>
+                  <a *ngIf="director.linkedin" [href]="director.linkedin" target="_blank"><i
+                      class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info p-3 text-center mt-auto">
+                <h5 class="mb-1">{{director.name}}</h5>
+                <small class="text-muted d-block">{{director.position}}</small>
+                <p class="mt-2">{{director.message}}</p>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+
+    </div>
+  </section>
+  <div class="container my-5" style="max-width: 1140px;">
+    <!-- Title Section -->
+    <div class="card border-0 rounded-4 px-4 px-md-5 py-5 mb-5">
+      <div class="card-body text-center">
+        <h2 class="fw-bold text-dark-blue">Our Core Values at Absolute Broking</h2>
+        <div class="mx-auto mb-3"
+          style="width: 60px; height: 4px; background-image: linear-gradient(to right, blue, green); border-radius: 50px;">
+        </div>
+        <p class="mb-0 fs-5">
+          At Absolute Broking Private Limited, our foundation is built upon a set of core values that guide every
+          decision we make and every interaction we have. These values are the bedrock of our commitment to our clients,
+          our team, and the financial markets we serve.
+        </p>
+      </div>
+    </div>
+
+    <div class="container py-5">
+      <h2 class="text-center fw-bold">Our Leadership Team</h2>
+      <div class="key-management-container">
+        <h2 class="text-center text-dark-blue mb-4">Key Management</h2>
+        <div class="slider-wrapper">
+          <div class="slider" [ngStyle]="{'transform': updateSlider(), 'transition':'transform 0.5s ease-in-out'}">
+            <div class="card" *ngFor="let director of directors" (click)="openModal(director)">
+              <div class="card-inner">
+                <!-- <img [src]="director.img" [alt]="director.alt" /> -->
+                <img [src]="director.img" />
+                <!-- <p>{{ director.alt }}</p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bootstrap Modal -->
+      <div class="modal fade" id="directorModal" tabindex="-1" aria-labelledby="directorModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="directorModalLabel">{{ selectedDirector?.alt }}</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div [innerHTML]="selectedDirector?.description || '<p>No details available.</p>'"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Value Sections -->
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="p-4 bg-white border-start border-4 border-primary shadow-sm rounded">
+          <h5 class="fw-bold text-dark-blue">Client-Centricity:</h5>
+          <p><strong>Your Success is Our Priority: </strong>We are relentlessly focused on empowering our clients to
+            achieve their financial goals. We listen, understand, and tailor our services to meet your individual needs
+            and aspirations.</p>
+          <p><strong>Building Trust: </strong>We strive to build long-term relationships based on honesty, transparency,
+            and consistent performance. Your trust is our most valuable asset.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-4 bg-white border-start border-4 border-success shadow-sm rounded">
+          <h5 class="fw-bold text-dark-blue">Integrity & Ethics:</h5>
+          <p><strong>Unwavering Honesty: </strong>We operate with the highest standards of integrity, ensuring all our
+            dealings are fair, truthful, and transparent.</p>
+          <p><strong>Ethical Conduct: </strong>We adhere to strict ethical guidelines, prioritizing your best interests
+            and maintaining confidentiality in all our operations.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-4 bg-white border-start border-4 border-info shadow-sm rounded">
+          <h5 class="fw-bold text-dark-blue">Innovation & Technology:</h5>
+          <p><strong>Driving Progress: </strong>We are committed to continuous innovation, leveraging cutting-edge
+            technology to provide you with the most advanced, efficient, and user-friendly trading and investment
+            solutions.</p>
+          <p><strong>Future-Ready: </strong>We constantly adapt and evolve to stay ahead of market trends, ensuring our
+            clients have access to the tools and insights needed to thrive in dynamic financial landscapes.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-4 bg-white border-start border-4 border-warning shadow-sm rounded">
+          <h5 class="fw-bold text-dark-blue">Excellence & Expertise:</h5>
+          <p><strong>Exceptional Service: </strong>We are dedicated to delivering a superior client experience through
+            our
+            robust platforms, accurate information, and prompt support.</p>
+          <p><strong>Knowledge & Skill: </strong>Our team comprises experienced professionals with deep market knowledge
+            and a passion for finance, ensuring you receive expert guidance and support.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-4 bg-white border-start border-4 border-danger shadow-sm rounded">
+          <h5 class="fw-bold text-dark-blue">Responsibility & Accountability:</h5>
+          <p><strong>Ownership: </strong>We take full responsibility for our actions and commitments, ensuring that we
+            deliver on our promises to clients and stakeholders.</p>
+          <p><strong>Prudent Management: </strong>We are committed to responsible business practices, safeguarding
+            client
+            assets and contributing positively to the financial ecosystem.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-4 bg-white border-start border-4 border-secondary shadow-sm rounded">
+          <h5 class="fw-bold text-dark-blue">Growth & Empowerment:</h5>
+          <p><strong>Continuous Learning: </strong>We foster a culture of continuous learning and development for our
+            team, ensuring they are equipped to provide the best possible service.</p>
+          <p><strong>Empowering Investors: </strong>We believe in democratizing access to financial markets, providing
+            tools and knowledge that empower every individual to make informed investment decisions.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Final Note -->
+    <div class="card border-0 shadow-sm rounded-4 p-4 mt-5">
+      <p class="text-center fs-5 mb-0">
+        These core values are not just words on a page; they are the principles that define who we are and how we
+        operate every single day at Absolute Broking Private Limited.
+      </p>
+    </div>
+  </div>

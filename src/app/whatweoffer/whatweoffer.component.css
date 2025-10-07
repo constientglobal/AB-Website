@@ -1,0 +1,13 @@
+.dot {
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  display: inline-block;
+  background: #ccc;
+  border-radius: 50%;
+  transition: background 0.5s;
+}
+.active-dot {
+  background: #2452e3;
+}

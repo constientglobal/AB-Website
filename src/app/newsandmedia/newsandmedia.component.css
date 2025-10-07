@@ -1,0 +1,21 @@
+.news-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 100%;
+}
+
+.news-card img {
+  object-fit: cover;
+  height: 200px;
+}
+
+.news-card h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.news-card p {
+  font-size: 0.9rem;
+}
