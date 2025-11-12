@@ -11,7 +11,7 @@ import { ourDirectorsInfo } from '../about/about.component';
 export class EquityComponent {
   directorsInfo: ourDirectorsInfo[] = [
     {
-      image: 'assets/img/team/pmg.png',
+      image: 'assets/img/CapitalAppreciation.png',
       name: ' Capital Appreciation',
       position: ' Managing Director',
       message: ' The value of shares tends to rise as companies grow and become more profitable, offering potential profit on sale.',
@@ -21,7 +21,7 @@ export class EquityComponent {
       linkedin: ''
     },
     {
-      image: 'assets/img/team/vig.png',
+      image: 'assets/img/Dividends.png',
       name: 'Dividends',
       position: 'Director ',
       message: 'Many companies pay out a portion of their profits to shareholders, providing regular income.',
@@ -31,7 +31,7 @@ export class EquityComponent {
       linkedin: ''
     },
     {
-      image: 'assets/img/team/eswr.png',
+      image: 'assets/img/InflationHedge.png',
       name: 'Inflation Hedge',
       position: 'Director',
       message: 'Historically, equity investments have outpaced inflation, preserving and growing your purchasing power.',
@@ -41,7 +41,7 @@ export class EquityComponent {
       linkedin: ''
     },
     {
-      image: 'assets/img/team/kd.png',
+      image: 'assets/img/Diversification.png',
       name: 'Diversification',
       position: 'Executive Director',
       message: 'Equity helps spread risk across various sectors and asset classes in an investment portfolio.',
@@ -51,7 +51,7 @@ export class EquityComponent {
       linkedin: ''
     },
     {
-      image: 'assets/img/team/KS1.png',
+      image: 'assets/img/Liquidity.png',
       name: 'Liquidity',
       position: 'Executive Director',
       message: 'Shares of public companies are generally easy to trade on stock exchanges, offering quick access to funds.',
