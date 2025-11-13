@@ -1,0 +1,14 @@
+.investor-alerts {
+  max-height: 425px;      /* Adjust height as needed */
+  overflow-y: scroll;     /* Enables vertical scrolling */
+  overflow-x: hidden;
+  padding-right: 10px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;  /* For Firefox */
+  -ms-overflow-style: none; /* For IE and Edge */
+}
+
+/* Hide scrollbar for Chrome, Safari, and Edge */
+.investor-alerts::-webkit-scrollbar {
+  display: none;
+}
