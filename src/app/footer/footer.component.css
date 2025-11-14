@@ -1,14 +1,22 @@
-.investor-alerts {
-  max-height: 425px;      /* Adjust height as needed */
-  overflow-y: scroll;     /* Enables vertical scrolling */
+/* .investor-alerts {
+  max-height: 425px; 
+  overflow-y: scroll;     
   overflow-x: hidden;
   padding-right: 10px;
   scroll-behavior: smooth;
-  scrollbar-width: none;  /* For Firefox */
-  -ms-overflow-style: none; /* For IE and Edge */
+  scrollbar-width: none;   
+  -ms-overflow-style: none;  
 }
 
-/* Hide scrollbar for Chrome, Safari, and Edge */
 .investor-alerts::-webkit-scrollbar {
   display: none;
+} */
+
+
+.investor-alerts {
+  max-height: 425px;       /* Adjust height as needed */
+  overflow-y: scroll;      /* Enables vertical scrolling */
+  overflow-x: hidden;
+  padding-right: 10px;
+  scroll-behavior: smooth;
 }
