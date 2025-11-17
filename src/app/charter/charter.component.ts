@@ -4,7 +4,7 @@ import { RouterModule, RouterLink } from '@angular/router';
 @Component({
   standalone: true,
   selector: 'app-charter',
-  imports: [RouterModule, RouterLink],
+  imports: [RouterModule],
   templateUrl: './charter.component.html',
   styleUrls: ['./charter.component.css'] 
 })

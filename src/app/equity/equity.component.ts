@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
 import { ourDirectorsInfo } from '../about/about.component';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-equity',
-  imports: [CarouselModule],
+  imports: [CarouselModule, RouterLink],
   templateUrl: './equity.component.html',
   styleUrl: './equity.component.css'
 })

@@ -1,4 +1,4 @@
-<!-- <IfModule mod_rewrite.c>
+<IfModule mod_rewrite.c>
   RewriteEngine On
 
   # Force HTTPS and www
@@ -8,14 +8,37 @@
 
   RewriteBase /
 
-  # Serve files and directories if they exist
-  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  # Allow files like PDF, images, CSS, JS, fonts
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+
+  # Allow directories if they exist
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
-  # Otherwise, redirect all requests to Angular's index.html
+  # Redirect everything else to Angular index.html
   RewriteRule ^ index.html [L]
 </IfModule>
 
-# Optional: Show Angular app instead of Apache 404
-ErrorDocument 404 /index.html -->
+# For Angular routing fallback
+ErrorDocument 404 /index.html
+
+
+# <!-- <IfModule mod_rewrite.c>
+#   RewriteEngine On
+
+#   RewriteCond %{HTTPS} !=on [OR]
+#   RewriteCond %{HTTP_HOST} !^www\. [NC]
+#   RewriteRule ^ https://www.absolutebroking.com%{REQUEST_URI} [L,R=301]
+
+#   RewriteBase /
+
+#   RewriteCond %{REQUEST_FILENAME} -f [OR]
+#   RewriteCond %{REQUEST_FILENAME} -d
+#   RewriteRule ^ - [L]
+
+#   # Otherwise, redirect all requests to Angular's index.html
+#   RewriteRule ^ index.html [L]
+# </IfModule>
+
+# ErrorDocument 404 /index.html -->
