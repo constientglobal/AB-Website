@@ -7,7 +7,7 @@ import { RouterModule, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-calculator',
-  imports: [FormsModule, CommonModule, ChartModule, RouterLink, RouterModule],
+  imports: [FormsModule, CommonModule, ChartModule,  RouterModule],
   templateUrl: './calculator.component.html',
   styleUrl: './calculator.component.css'
 })
