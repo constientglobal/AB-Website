@@ -1,12 +1,13 @@
 import { Component, AfterViewInit, ElementRef } from '@angular/core';
 import { RouterModule, RouterLink } from '@angular/router';
+import { FormsModule } from '@angular/forms'
 
 declare const bootstrap: any;
 
 @Component({
   selector: 'app-navheader',
   standalone: true,
-  imports: [RouterModule, RouterLink],
+  imports: [RouterModule, RouterLink, FormsModule],
   templateUrl: './navheader.component.html',
   styleUrls: ['./navheader.component.css']
 })
