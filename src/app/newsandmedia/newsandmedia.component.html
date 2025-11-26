@@ -1,10 +1,8 @@
 <div class="container my-4">
 
-    <!-- Hero Banner -->
     <div class="position-relative rounded overflow-hidden">
         <img src="assets/img/image.png" alt="News Media Banner" class="img-fluid w-100">
 
-        <!-- Arrows -->
         <div class="position-absolute bottom-0 end-0 d-flex gap-2 p-3">
             <button class="btn btn-light rounded-circle p-0 d-flex align-items-center justify-content-center"
                 style="width: 35px; height: 35px;">
@@ -17,8 +15,7 @@
         </div>
     </div>
 
-    <!-- Latest Posts -->
-    <div class="mt-5">
+    <!-- <div class="mt-5">
         <h2 class="fs-4 mb-3 fw-bold">Latest Posts</h2>
         <p-carousel [value]="posts" [numVisible]="3" [numScroll]="1" [autoplayInterval]="5000" [circular]="true">
             <ng-template pTemplate="item" let-post>
@@ -32,5 +29,71 @@
                 </div>
             </ng-template>
         </p-carousel>
+    </div> -->
+
+    <div class="w-full max-w-[1300px] mx-auto px-4 py-8 space-y-8">
+
+        <!-- News Card -->
+        <div *ngFor="let article of displayedArticles"
+            class="bg-white border border-gray-200 rounded-2xl shadow-md p-6 flex flex-col sm:flex-row items-start gap-6 mb-3 rounded-4">
+
+            <!-- Left Image -->
+            <div class="w-full sm:w-48 h-32 rounded-lg overflow-hidden shadow-md mt-3" style="margin-left: 20px;">
+                <img [src]="article.image" alt="News and Media" class="w-full h-full object-cover" />
+            </div>
+
+            <!-- Right Content -->
+            <div class="flex-1 mt-3 mb-3" style="margin-left: 20px;">
+                <h2 class="text-[22px] fw-bold text-[#1E3AFA] mb-2">
+                    {{ article.title }}
+                </h2>
+
+                <p class="text-gray-600 leading-relaxed mb-4 text-[15px]">
+                    {{ article.summary }}
+                </p>
+
+                <!-- EXACT SAME BUTTON STYLE (screenshot matched) -->
+                <button (click)="openModal(article.title, article.content)" class="btn btn-primary
+               hover:shadow-lg hover:scale-[1.03] transition-all duration-300">
+                    Know More
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Show More / Show Less -->
+        <div class="text-center mt-6 btn-primary space-x-4">
+            <button *ngIf="currentArticlesCount < newsData.length" (click)="showMore()"
+                class="btn btn-primary mt-4 hover:shadow-lg hover:scale-[1.03] transition-all duration-300">
+                Show More News
+            </button>
+
+            <button *ngIf="currentArticlesCount > articlesToShowInitially" (click)="showLess()"
+                class="btn btn-primary mt-4 hover:shadow-lg hover:scale-[1.03] transition-all duration-300">
+                Show Less
+            </button>
+        </div>
+
     </div>
+
+    <div class="modal fade mt-5" id="articleModal" tabindex="-1" style="padding-top: 120px;">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content p-4">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">{{ modalTitle }}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    {{ modalContent }}
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </div>

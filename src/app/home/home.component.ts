@@ -50,12 +50,12 @@ export class HomeComponent implements OnInit {
         message : 'At Absolute Broking Private Limited, we understand that true financial well-being extends beyond investments – it encompasses comprehensive protection for you and your loved ones.',
         category : []
       },
-      {
-        image: 'assets/img/loan3.png',
-        header: 'Loans',
-        message : 'Welcome to our comprehensive guide on various types of loans – essential financial tools that can help individuals and businesses meet their diverse funding needs, from personal expenses to large investments.',
-        category : []
-      },
+      // {
+      //   image: 'assets/img/loan3.png',
+      //   header: 'Loans',
+      //   message : 'Welcome to our comprehensive guide on various types of loans – essential financial tools that can help individuals and businesses meet their diverse funding needs, from personal expenses to large investments.',
+      //   category : []
+      // },
       {
         image: 'assets/img/dp1.png',
         header: 'Wealth',

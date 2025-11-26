@@ -1,0 +1,13 @@
+.transition-scale {
+  transition: all 0.3s ease;
+  opacity: 0.5;
+}
+
+.active-img {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.inactive-img {
+  opacity: 0.5;
+}
