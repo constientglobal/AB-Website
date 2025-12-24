@@ -47,6 +47,8 @@ import { TraineeComponent } from './trainee/trainee.component';
 import { NewsandmediaComponent } from './newsandmedia/newsandmedia.component';
 import { WhatweofferComponent } from './whatweoffer/whatweoffer.component';
 import { ErrorComponent } from './error/error.component';
+import { InternalComponent } from './internal/internal.component';
+import { ACSComponent } from './acs/acs.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -95,5 +97,7 @@ export const routes: Routes = [
   {path:'ManagementTrainee', component:TraineeComponent},
   {path:'News&Media', component:NewsandmediaComponent},
   {path:'WhatweOffer', component:WhatweofferComponent},
+  {path:'Internal', component:InternalComponent},
+  {path:'Internal/AccountClosureSectionLogin', component:ACSComponent},
   {path:'**', component:ErrorComponent}
 ];

@@ -1,0 +1,155 @@
+<main class="container my-5 pt-5" style="max-width: 550px;">
+
+    <h1 class="fw-bold text-primary mb-4 text-center" style="font-size: 28px;">
+        Online Account Closure
+    </h1>
+
+    <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+        <div class="row g-0">
+
+            <div class="col-12 p-5 border-end">
+                <div class="d-flex align-items-center mb-4">
+                    <div class="bg-danger-subtle p-2 rounded me-3">
+                        <svg width="24" height="24" fill="none" stroke="#d9534f" stroke-width="2" viewBox="0 0 24 24">
+                            <rect x="3" y="11" width="18" height="11" rx="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <h2 class="h5 fw-semibold text-secondary mb-0">Authentication</h2>
+                </div>
+
+                <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+
+                    <!-- Client ID -->
+                    <div class="mb-4">
+                        <label class="form-label text-muted">Client ID</label>
+                        <input type="text" class="form-control form-control-lg" name="clientId" ngModel
+                            #clientId="ngModel" required minlength="4" placeholder="Enter Client ID" />
+
+                        @if (clientId.invalid && (clientId.touched || loginForm.submitted)) {
+                        <small class="text-danger">Client ID is required (min 4 characters)</small>
+                        }
+                    </div>
+
+                    <!-- Mobile Number -->
+                    <div class="mb-4">
+                        <label class="form-label text-muted">Mobile Number</label>
+
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-text fw-semibold">+91</span>
+                            <input type="text" class="form-control" name="mobile" ngModel #mobile="ngModel"
+                                maxlength="10" pattern="^[0-9]{10}$" placeholder="Enter 10 digit number" required />
+
+                            @if (mobile.invalid && (mobile.touched || loginForm.submitted)) {
+                            <small class="text-danger">
+                                Enter a valid 10-digit mobile number
+                            </small>
+                            }
+                        </div>
+
+                        <small class="text-muted">
+                            Format: +91 XXXXXXXXXX (10 digits number)
+                        </small>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="mb-4">
+                        <label class="form-label text-muted">Email ID</label>
+                        <input type="email" class="form-control form-control-lg" name="email" ngModel #email="ngModel"
+                            required email placeholder="Enter Email ID" />
+
+                        @if (email.invalid && (email.touched || loginForm.submitted)) {
+                        <small class="text-danger">
+                            Enter a valid email address
+                        </small>
+                        }
+
+                    </div>
+
+                    <!-- Captcha -->
+                    <div class="mb-4">
+                        <label class="form-label text-muted">Captcha Verification</label>
+
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <div class="px-4 py-2 fw-bold fs-4 border border-dashed rounded text-decoration-line-through fst-italic user-select-none"
+                                style="
+                  letter-spacing: 5px;
+                  background:
+                  repeating-linear-gradient(
+                    45deg,
+                    #e9ecef,
+                    #e9ecef 10px,
+                    transparent 10px,
+                    transparent 20px
+                  );
+                ">
+                                {{ currentCaptcha }}
+                            </div>
+
+                            <button type="button" class="btn btn-outline-primary" (click)="generateCaptcha()"
+                                title="Refresh Code">
+                                &#8634;
+                            </button>
+                        </div>
+
+                        <input type="text" class="form-control form-control-lg" name="captchaInput"
+                            [(ngModel)]="captchaInput" required />
+
+                        @if ((captchaError || loginForm.submitted) && !captchaInput) {
+                        <small class="text-danger">Captcha is required</small>
+                        }
+
+                        @if (captchaError && captchaInput) {
+                        <small class="text-danger">Invalid captcha, please try again</small>
+                        }
+
+                        @if (captchaError) {
+                        <small class="text-danger">
+                            Invalid captcha, please try again.
+                        </small>
+                        }
+                    </div>
+
+                    <!-- Submit -->
+                    <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold shadow">
+                        LOGIN
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+
+<!-- Toast Container -->
+<div class="toast-container position-fixed top-0 end-0 p-3">
+
+    <!-- Success Toast -->
+    <div class="toast align-items-center text-bg-success border-0" role="alert" [class.show]="showSuccessToast"
+        [class.hide]="!showSuccessToast">
+
+        <div class="d-flex">
+            <div class="toast-body">
+                {{ successMessage }}
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" (click)="hideToast()">
+            </button>
+        </div>
+    </div>
+
+    <!-- Error Toast -->
+    <div class="toast align-items-center text-bg-danger border-0 mt-2" role="alert" [class.show]="showErrorToast"
+        [class.hide]="!showErrorToast">
+
+        <div class="d-flex">
+            <div class="toast-body">
+                {{ errorMessage }}
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" (click)="hideToast()">
+            </button>
+        </div>
+    </div>
+
+</div>
