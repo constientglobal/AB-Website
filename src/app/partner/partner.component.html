@@ -10,8 +10,8 @@
           Wealth Management, and more, all with zero investment and full support from our trusted brand. Turn your
           connections into rewarding partnerships today!</p>
         <div class="d-flex flex-column flex-md-row">
-          <a routerLink="/" class="btn-get-started">Join with us <i
-              class="bi bi-arrow-right"></i></a>
+          <a class="btn-get-started pointer" data-bs-toggle="modal" data-bs-target="#partnerModal">Join with us
+            <i class="bi bi-arrow-right"></i></a>
         </div>
       </div>
       <div class="col-lg-6 order-1 order-lg-2 hero-img">
@@ -36,7 +36,7 @@
                 entrepreneurial spirit and supporting the next generation of business leaders.</p>
             </div>
             <div>
-              <a routerLink="/YoungEntrepreneurs" class="btn btn-primary btn-sm">Explore More <i
+              <a routerLink="/YoungEntrepreneurs" class="btn btn-primary btn-sm" style="height:32px;">Explore More <i
                   class="bi bi-arrow-right"></i></a>
             </div>
           </div>
@@ -101,6 +101,207 @@
             <div>
               <a routerLink="/Sub-Brokers&AuthorizedPersons" class="btn btn-primary btn-sm">Explore More <i
                   class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="partnerModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog">
+    <div class="modal-content border-0">
+
+      <!-- <div class="modal-header border-0">
+        <h5 class="modal-title">Partner Portal</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div> -->
+
+      <div class="modal-body p-0">
+
+        <div class="main-container">
+
+          <div class="section-a text-center">
+            <img src="assets/img/AbsoluteBrokingNewLogo.png" alt="" class="mb-3"
+              style="height: 82px; width: 200px;margin-left: 70px;">
+            <h2 class="mb-2">Partner Portal</h2>
+            <p class="mb-0" style="color: black;">Start your journey with us today.</p>
+          </div>
+          <div class="section-b">
+
+            <div id="loginSection" class="hidden">
+              <h3>Welcome Back</h3>
+              <div class="form-group">
+                <label>Email or Mobile</label>
+                <input type="text">
+              </div>
+              <div class="form-group">
+                <label>Password</label>
+                <input type="password">
+              </div>
+              <button class="btn btn-next w-100">Login</button>
+              <button class="btn btn-outline w-100" (click)="toggleView('register')" style="margin-top:20px;margin-left: 0px;">
+                New Partner? Register
+              </button>
+            </div>
+            <div id="registerSection">
+              <form #partnerForm="ngForm" (ngSubmit)="submitPartnerForm(partnerForm)">
+                <div class="step active" id="step1">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h3 class="mb-0">Personal Details</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                  </div>
+                  <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" required [(ngModel)]="partnerFormData.fullname" name="fullname">
+                  </div>
+                  <div class="row">
+                    <div class="form-group">
+                      <label>Mobile</label>
+                      <input type="tel" maxlength="10" [(ngModel)]="partnerFormData.mobile" name="mobile">
+                    </div>
+                    <div class="form-group">
+                      <label>WhatsApp Number</label>
+                      <input type="tel" maxlength="10" [(ngModel)]="partnerFormData.whatsappNumber" name="whatsappNumber">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group">
+                      <label>Alternate Contact</label>
+                      <input type="tel" maxlength="10" [(ngModel)]="partnerFormData.alternateContact" name="alternateContact">
+                    </div>
+                    <div class="form-group">
+                      <label>Email</label>
+                      <input type="email" required [(ngModel)]="partnerFormData.email" name="email">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group" style="flex:2">
+                      <label>City</label>
+                      <input type="text" [(ngModel)]="partnerFormData.city" name="city">
+                    </div>
+                    <div class="form-group" style="flex:1">
+                      <label>Pin Code</label>
+                      <input type="number" [(ngModel)]="partnerFormData.pincode" name="pincode">
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-next" (click)="move(2)">
+                    Next: Profession
+                  </button>
+                  <button id="loginSwitch" type="button" class="btn btn-outline" (click)="toggleView('login')">
+                    Already a Partner? Login
+                  </button>
+                </div>
+                <div class="step" id="step2">
+                  <h3>Profession Details</h3>
+                  <div class="form-group">
+                    <label>Current Profession</label>
+                    <select (change)="toggleProfFields($event)" [(ngModel)]="partnerFormData.profession" name="profession">
+                      <option value="">-- Select --</option>
+                      <option value="Salaried">Salaried</option>
+                      <option value="Business">Business</option>
+                      <option value="Others">Others</option>
+                    </select>
+                  </div>
+                  <div id="sal_fields" class="hidden form-group">
+                    <label>Category</label>
+                    <select [(ngModel)]="partnerFormData.category" name="category">
+                      <option>Government</option>
+                      <option>Private</option>
+                    </select>
+                  </div>
+                  <div id="biz_fields" class="hidden">
+                    <div class="form-group">
+                      <label>Business Type</label>
+                      <select [(ngModel)]="partnerFormData.businessType" name="businessType">
+                        <option>Proprietor</option>
+                        <option>Partnership</option>
+                        <option>Sole Proprietor</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>Business Name</label>
+                      <input type="text" [(ngModel)]="partnerFormData.businessName" name="businessName">
+                    </div>
+                  </div>
+                  <div id="oth_fields" class="hidden form-group">
+                    <label>Other Details</label>
+                    <input type="text" [(ngModel)]="partnerFormData.otherProfessionDetails" name="otherProfessionDetails">
+                  </div>
+                  <div class="btn-row">
+                    <button type="button" class="btn btn-prev" (click)="move(1)">
+                      Back
+                    </button>
+                    <button type="button" class="btn btn-next" (click)="move(3)">
+                      Next: Experience
+                    </button>
+                  </div>
+                </div>
+                <div class="step" id="step3">
+                  <h3>Experience & Office</h3>
+                  <div class="form-group">
+                    <label>Have Dedicated Office?</label>
+                    <select (change)="toggleOffice($event)" [(ngModel)]="partnerFormData.hasDedicatedOffice" name="hasDedicatedOffice">
+                      <option value="No">No</option>
+                      <option value="Yes">Yes</option>
+                    </select>
+                  </div>
+                  <div id="office_loc_group" class="hidden form-group">
+                    <label>Office Location</label>
+                    <input type="text" placeholder="Search City" [(ngModel)]="partnerFormData.officeLocation" name="officeLocation">
+                  </div>
+                  <div class="form-group">
+                    <label>Financial Products Experience?</label>
+                    <select (change)="toggleExp($event)" [(ngModel)]="partnerFormData.hasFinancialExperience" name="hasFinancialExperience">
+                      <option value="No">No</option>
+                      <option value="Yes">Yes</option>
+                    </select>
+                  </div>
+                  <div *ngIf="showExp" id="exp_years_group" class="form-group">
+                    <label for="experience">Years of Experience</label>
+                    <select id="experience" class="form-control" [(ngModel)]="partnerFormData.yearsOfExperience"
+                      name="yearsOfExperience">
+                      <option *ngFor="let y of yearsList" [value]="y">{{ y }} Years</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Total No. of Clients</label>
+                    <select [(ngModel)]="partnerFormData.totalClients" name="totalClients">
+                      <option>0-50</option>
+                      <option>51-100</option>
+                      <option>101-500</option>
+                      <option>Above 500</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Equity Knowledge</label>
+                    <select [(ngModel)]="partnerFormData.equityKnowledge" name="equityKnowledge">
+                      <option>Below Average</option>
+                      <option>Average</option>
+                      <option>Good</option>
+                      <option>Excellent</option>
+                      <option>Very Excellent</option>
+                    </select>
+                  </div>
+                  <div class="terms-row" style="display: flex; align-items: center; gap: 8px; margin-top: 10px;">
+                    <input type="checkbox" required id="terms"
+                      style="width: 16px; height: 16px; accent-color: #28a745;">
+                    <label for="terms" style="font-size: 14px; margin-top: 6px;">
+                      I agree to the <a href="https://www.absolutebroking.com/t&c" style="color: #007bff; text-decoration: none;">Terms &amp; Conditions</a>
+                    </label>
+                  </div>
+                  <div class="btn-row">
+                    <button type="button" class="btn btn-prev" (click)="move(2)">
+                      Back
+                    </button>
+                    <button class="btn btn-next" style="background:#16a34a" [disabled]="loading">
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
