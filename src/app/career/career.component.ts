@@ -174,7 +174,7 @@ export class CareerComponent {
       .subscribe({
         next: (res: string) => {
           const uploadedUrl = res;
-          console.log('Upload API response:', uploadedUrl);
+          // console.log('Upload API response:', uploadedUrl);
           // Step 2: Prepare Mehery API payload
           const payload = {
             channelId: 'gmail:onboardingabsolutebrokingcom',
@@ -206,7 +206,7 @@ export class CareerComponent {
                 uploadedUrl,
             },
           };
-          console.log('Upload API Request:', payload);
+          // console.log('Upload API Request:', payload);
 
           const headers = new HttpHeaders()
             .set('x-api-key', this.meheryApiKey)
@@ -262,7 +262,6 @@ export class CareerComponent {
     }
 
     this.resumeFile = file;
-    console.log('Selected file:', this.resumeFile);
 
     this.convertFileToBase64(file)
       .then((base64) => {
