@@ -167,7 +167,7 @@ export class CareerComponent {
     // Step 1: Upload Base64 file
     this.http
       .post(
-        'https://www.absolutebroking.com/ABCoreWebAPI/api/DIYV1/SaveResumeFromBase64',
+        'https://kyc.absolutebroking.com/ABCoreWebAPI/api/DIYV1/SaveResumeFromBase64',
         uploadPayload,
         { responseType: 'text' },
       )
@@ -202,8 +202,8 @@ export class CareerComponent {
               caption: this.resumeFile?.name,
               filename: this.resumeFile?.name,
               link:
-                'https://www.absolutebroking.com/ABCoreWebAPI/file/' +
-                this.resumeFile?.name,
+                'https://kyc.absolutebroking.com/ABCoreWebAPI/file/' +
+                uploadedUrl,
             },
           };
           console.log('Upload API Request:', payload);
