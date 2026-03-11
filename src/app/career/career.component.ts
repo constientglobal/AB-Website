@@ -174,7 +174,7 @@ export class CareerComponent {
       .subscribe({
         next: (res: string) => {
           const uploadedUrl = res;
-          console.log('Upload API response:', res);
+          console.log('Upload API response:', uploadedUrl);
           // Step 2: Prepare Mehery API payload
           const payload = {
             channelId: 'gmail:onboardingabsolutebrokingcom',
