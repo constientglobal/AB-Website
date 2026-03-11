@@ -203,7 +203,7 @@ export class CareerComponent {
               filename: this.resumeFile?.name,
               link:
                 'https://www.absolutebroking.com/ABCoreWebAPI/file/' +
-                uploadedUrl,
+                this.resumeFile?.name,
             },
           };
           console.log('Upload API Request:', payload);
@@ -254,6 +254,7 @@ export class CareerComponent {
   onFileSelected(event: Event) {
     const input = event.target as HTMLInputElement;
     const file = input.files?.[0];
+    
 
     if (!file) {
       console.warn('No file selected.');
@@ -261,6 +262,7 @@ export class CareerComponent {
     }
 
     this.resumeFile = file;
+    console.log('Selected file:', this.resumeFile);
 
     this.convertFileToBase64(file)
       .then((base64) => {
