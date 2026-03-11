@@ -186,8 +186,8 @@ export class CareerComponent {
               lang: 'en'
             },
             document: {
-              caption: this.resumeFile?.name,
-              filename: this.resumeFile?.name,
+              caption: this.resumeFile,
+              filename: this.resumeFile,
               link: fileUrl
             }
           };
