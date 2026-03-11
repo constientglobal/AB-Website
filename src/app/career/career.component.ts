@@ -160,6 +160,7 @@ export class CareerComponent {
       .subscribe({
         next: (res: string) => {
           const uploadedUrl = res;
+          const fileUrl = "https://www.absolutebroking.com/ABCoreWebAPI/file/" + uploadedUrl;
 
           // Step 2: Prepare Mehery API payload
           const payload = {
@@ -185,9 +186,9 @@ export class CareerComponent {
               lang: 'en'
             },
             document: {
-              caption: this.resumeFile,
-              filename: this.resumeFile,
-              link: "https://www.absolutebroking.com/ABCoreWebAPI/file/" + uploadedUrl
+              caption: this.resumeFile?.name,
+              filename: this.resumeFile?.name,
+              link: fileUrl
             }
           };
 
