@@ -1,0 +1,337 @@
+<section class="abs-forms-section">
+
+  <!-- Ambient background particles -->
+  <div class="abs-particle-field" aria-hidden="true">
+    <span *ngFor="let p of particles" class="abs-particle"
+      [style.left.%]="p.x"
+      [style.top.%]="p.y"
+      [style.animationDelay]="p.delay"
+      [style.animationDuration]="p.duration">
+    </span>
+  </div>
+
+  <!-- Page header -->
+  <div class="abs-page-header">
+    <div class="abs-header-line"></div>
+    <h1 class="abs-page-title">Application Forms</h1>
+  </div>
+
+  <!-- ── ACCOUNT OPENING FORMS ── -->
+  <div class="abs-category-block">
+
+    <div class="abs-category-header" (mouseenter)="onCategoryHover('opening')" (mouseleave)="onCategoryLeave()">
+      <div class="abs-category-accent" [class.abs-active]="activeCategory === 'opening'"></div>
+      <h2 class="abs-category-title">Account Opening Forms</h2>
+      <div class="abs-title-glow" [class.abs-visible]="activeCategory === 'opening'"></div>
+    </div>
+
+    <div class="abs-forms-grid">
+
+      <!-- Individual AOF -->
+      <div class="abs-form-card"
+           [class.abs-card-hovered]="hoveredCard === 'ind-aof'"
+           (mouseenter)="onCardHover('ind-aof')"
+           (mouseleave)="onCardLeave()"
+           (click)="onDownload('individual-aof')"
+           role="button"
+           tabindex="0"
+           aria-label="Download Individual Account Opening Form"
+           (keydown.enter)="onDownload('individual-aof')"
+           (keydown.space)="onDownload('individual-aof')">
+        <div class="abs-card-glow-ring"></div>
+        <div class="abs-card-shimmer"></div>
+        <div class="abs-folder-wrap">
+          <div class="abs-folder-icon">
+            <div class="abs-folder-back"></div>
+            <div class="abs-folder-papers">
+              <div class="abs-paper abs-paper-3"></div>
+              <div class="abs-paper abs-paper-2"></div>
+              <div class="abs-paper abs-paper-1"></div>
+            </div>
+            <div class="abs-folder-front"></div>
+            <div class="abs-folder-label">
+              <span class="abs-label-text">Scripts</span>
+              <svg class="abs-label-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            </div>
+          </div>
+          <div class="abs-download-pulse" [class.abs-pulse-active]="downloadingCard === 'individual-aof'">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </div>
+        </div>
+        <p class="abs-card-label">Individual Account<br>Opening Form</p>
+        <div class="abs-card-tag">PDF</div>
+      </div>
+
+      <!-- Non-Individual AOF -->
+      <div class="abs-form-card"
+           [class.abs-card-hovered]="hoveredCard === 'non-ind-aof'"
+           (mouseenter)="onCardHover('non-ind-aof')"
+           (mouseleave)="onCardLeave()"
+           (click)="onDownload('non-individual-aof')"
+           role="button"
+           tabindex="0"
+           aria-label="Download Non-Individual Account Opening Form"
+           (keydown.enter)="onDownload('non-individual-aof')"
+           (keydown.space)="onDownload('non-individual-aof')">
+        <div class="abs-card-glow-ring"></div>
+        <div class="abs-card-shimmer"></div>
+        <div class="abs-folder-wrap">
+          <div class="abs-folder-icon">
+            <div class="abs-folder-back"></div>
+            <div class="abs-folder-papers">
+              <div class="abs-paper abs-paper-3"></div>
+              <div class="abs-paper abs-paper-2"></div>
+              <div class="abs-paper abs-paper-1"></div>
+            </div>
+            <div class="abs-folder-front"></div>
+            <div class="abs-folder-label">
+              <span class="abs-label-text">Scripts</span>
+              <svg class="abs-label-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            </div>
+          </div>
+          <div class="abs-download-pulse" [class.abs-pulse-active]="downloadingCard === 'non-individual-aof'">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </div>
+        </div>
+        <p class="abs-card-label">Non-Individual Account<br>Opening Form</p>
+        <div class="abs-card-tag">PDF</div>
+      </div>
+
+    </div><!-- /abs-forms-grid -->
+
+    <!-- Client Registration — Vernacular Languages (side panel) -->
+    <div class="abs-vernacular-panel">
+      <div class="abs-vernacular-header">
+        <span class="abs-vernacular-title">
+          <strong>CLIENT</strong> REGISTRATION DOCUMENTS<br>
+          <span class="abs-vernacular-sub">VERNACULAR LANGUAGES</span>
+        </span>
+      </div>
+      <ul class="abs-vernacular-list">
+        <li *ngFor="let lang of vernacularLinks; let i = index"
+            class="abs-vernacular-item"
+            [style.animationDelay]="(i * 0.08) + 's'"
+            (click)="onVernacularClick(lang)"
+            role="link"
+            tabindex="0"
+            [attr.aria-label]="'Download ' + lang.label + ' vernacular form'"
+            (keydown.enter)="onVernacularClick(lang)">
+          <svg class="abs-ext-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <span>{{ lang.label }}</span>
+          <div class="abs-item-underline"></div>
+        </li>
+      </ul>
+    </div>
+
+  </div><!-- /account opening -->
+
+  <!-- ── ACCOUNT MODIFICATION FORMS ── -->
+  <div class="abs-category-block">
+
+    <div class="abs-category-header" (mouseenter)="onCategoryHover('modification')" (mouseleave)="onCategoryLeave()">
+      <div class="abs-category-accent" [class.abs-active]="activeCategory === 'modification'"></div>
+      <h2 class="abs-category-title">Account Modification Forms</h2>
+      <div class="abs-title-glow" [class.abs-visible]="activeCategory === 'modification'"></div>
+    </div>
+
+    <div class="abs-forms-grid">
+
+      <!-- Segment Enablement -->
+      <div class="abs-form-card"
+           [class.abs-card-hovered]="hoveredCard === 'seg-enable'"
+           (mouseenter)="onCardHover('seg-enable')"
+           (mouseleave)="onCardLeave()"
+           (click)="onDownload('segment-enablement')"
+           role="button"
+           tabindex="0"
+           aria-label="Download Segment Enablement Form"
+           (keydown.enter)="onDownload('segment-enablement')"
+           (keydown.space)="onDownload('segment-enablement')">
+        <div class="abs-card-glow-ring"></div>
+        <div class="abs-card-shimmer"></div>
+        <div class="abs-folder-wrap">
+          <div class="abs-folder-icon">
+            <div class="abs-folder-back"></div>
+            <div class="abs-folder-papers">
+              <div class="abs-paper abs-paper-3"></div>
+              <div class="abs-paper abs-paper-2"></div>
+              <div class="abs-paper abs-paper-1"></div>
+            </div>
+            <div class="abs-folder-front"></div>
+            <div class="abs-folder-label">
+              <span class="abs-label-text">Scripts</span>
+              <svg class="abs-label-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            </div>
+          </div>
+          <div class="abs-download-pulse" [class.abs-pulse-active]="downloadingCard === 'segment-enablement'">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </div>
+        </div>
+        <p class="abs-card-label">Segment Enablement</p>
+        <div class="abs-card-tag">PDF</div>
+      </div>
+
+      <!-- Upstream Client Nodal Bank Account -->
+      <div class="abs-form-card"
+           [class.abs-card-hovered]="hoveredCard === 'nodal-bank'"
+           (mouseenter)="onCardHover('nodal-bank')"
+           (mouseleave)="onCardLeave()"
+           (click)="onDownload('nodal-bank-account')"
+           role="button"
+           tabindex="0"
+           aria-label="Download Upstream Client Nodal Bank Account Form"
+           (keydown.enter)="onDownload('nodal-bank-account')"
+           (keydown.space)="onDownload('nodal-bank-account')">
+        <div class="abs-card-glow-ring"></div>
+        <div class="abs-card-shimmer"></div>
+        <div class="abs-folder-wrap">
+          <div class="abs-folder-icon">
+            <div class="abs-folder-back"></div>
+            <div class="abs-folder-papers">
+              <div class="abs-paper abs-paper-3"></div>
+              <div class="abs-paper abs-paper-2"></div>
+              <div class="abs-paper abs-paper-1"></div>
+            </div>
+            <div class="abs-folder-front"></div>
+            <div class="abs-folder-label">
+              <span class="abs-label-text">Scripts</span>
+              <svg class="abs-label-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            </div>
+          </div>
+          <div class="abs-download-pulse" [class.abs-pulse-active]="downloadingCard === 'nodal-bank-account'">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </div>
+        </div>
+        <p class="abs-card-label">Upstream Client Nodal<br>Bank Account</p>
+        <div class="abs-card-tag">PDF</div>
+      </div>
+
+    </div>
+  </div><!-- /account modification -->
+
+  <!-- ── POLICY DOCUMENTS ── -->
+  <div class="abs-category-block abs-policy-block">
+
+    <div class="abs-category-header" (mouseenter)="onCategoryHover('policy')" (mouseleave)="onCategoryLeave()">
+      <div class="abs-category-accent" [class.abs-active]="activeCategory === 'policy'"></div>
+      <h2 class="abs-category-title">Policy Documents</h2>
+      <div class="abs-title-glow" [class.abs-visible]="activeCategory === 'policy'"></div>
+    </div>
+
+    <ul class="abs-link-list">
+      <li class="abs-link-item"
+          (click)="onLinkClick('policy-procedures')"
+          role="link" tabindex="0"
+          aria-label="Open Policy and Procedures document"
+          (keydown.enter)="onLinkClick('policy-procedures')">
+        <svg class="abs-ext-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        <span>Policy &amp; Procedures</span>
+        <div class="abs-item-underline"></div>
+      </li>
+    </ul>
+
+  </div>
+
+  <!-- ── INVESTOR CHARTER ── -->
+  <div class="abs-category-block abs-charter-block">
+
+    <div class="abs-category-header" (mouseenter)="onCategoryHover('charter')" (mouseleave)="onCategoryLeave()">
+      <div class="abs-category-accent" [class.abs-active]="activeCategory === 'charter'"></div>
+      <h2 class="abs-category-title abs-charter-title">Investor Charter</h2>
+      <div class="abs-title-glow" [class.abs-visible]="activeCategory === 'charter'"></div>
+    </div>
+
+    <ul class="abs-link-list">
+      <li class="abs-link-item"
+          (click)="onLinkClick('dp-investor-charter')"
+          role="link" tabindex="0"
+          aria-label="Open DP Investor Charter"
+          (keydown.enter)="onLinkClick('dp-investor-charter')">
+        <svg class="abs-ext-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        <span>DP Investor Charter</span>
+        <div class="abs-item-underline"></div>
+      </li>
+    </ul>
+
+    <!-- Rights & Obligations cards -->
+    <div class="abs-forms-grid abs-charter-grid">
+
+      <div class="abs-form-card"
+           [class.abs-card-hovered]="hoveredCard === 'rights-dp'"
+           (mouseenter)="onCardHover('rights-dp')"
+           (mouseleave)="onCardLeave()"
+           (click)="onDownload('rights-obligation-dp')"
+           role="button" tabindex="0"
+           aria-label="Download Rights and Obligation of DP"
+           (keydown.enter)="onDownload('rights-obligation-dp')"
+           (keydown.space)="onDownload('rights-obligation-dp')">
+        <div class="abs-card-glow-ring"></div>
+        <div class="abs-card-shimmer"></div>
+        <div class="abs-folder-wrap">
+          <div class="abs-folder-icon">
+            <div class="abs-folder-back"></div>
+            <div class="abs-folder-papers">
+              <div class="abs-paper abs-paper-3"></div>
+              <div class="abs-paper abs-paper-2"></div>
+              <div class="abs-paper abs-paper-1"></div>
+            </div>
+            <div class="abs-folder-front"></div>
+            <div class="abs-folder-label">
+              <span class="abs-label-text">Scripts</span>
+              <svg class="abs-label-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            </div>
+          </div>
+          <div class="abs-download-pulse" [class.abs-pulse-active]="downloadingCard === 'rights-obligation-dp'">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </div>
+        </div>
+        <p class="abs-card-label">Rights &amp; Obligation of DP</p>
+        <div class="abs-card-tag">PDF</div>
+      </div>
+
+      <div class="abs-form-card"
+           [class.abs-card-hovered]="hoveredCard === 'rights-broker'"
+           (mouseenter)="onCardHover('rights-broker')"
+           (mouseleave)="onCardLeave()"
+           (click)="onDownload('rights-obligation-broker')"
+           role="button" tabindex="0"
+           aria-label="Download Rights and Obligation of Stock Broker"
+           (keydown.enter)="onDownload('rights-obligation-broker')"
+           (keydown.space)="onDownload('rights-obligation-broker')">
+        <div class="abs-card-glow-ring"></div>
+        <div class="abs-card-shimmer"></div>
+        <div class="abs-folder-wrap">
+          <div class="abs-folder-icon">
+            <div class="abs-folder-back"></div>
+            <div class="abs-folder-papers">
+              <div class="abs-paper abs-paper-3"></div>
+              <div class="abs-paper abs-paper-2"></div>
+              <div class="abs-paper abs-paper-1"></div>
+            </div>
+            <div class="abs-folder-front"></div>
+            <div class="abs-folder-label">
+              <span class="abs-label-text">Scripts</span>
+              <svg class="abs-label-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            </div>
+          </div>
+          <div class="abs-download-pulse" [class.abs-pulse-active]="downloadingCard === 'rights-obligation-broker'">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </div>
+        </div>
+        <p class="abs-card-label">Rights &amp; Obligation of<br>Stock Broker</p>
+        <div class="abs-card-tag">PDF</div>
+      </div>
+
+    </div>
+  </div><!-- /investor charter -->
+
+  <!-- Toast notification -->
+  <div class="abs-toast"
+       [class.abs-toast-visible]="toastVisible"
+       role="status"
+       aria-live="polite">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+    <span>{{ toastMessage }}</span>
+  </div>
+
+</section>
